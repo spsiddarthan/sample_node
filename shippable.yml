@@ -23,4 +23,8 @@ notifications:
    type : slack
    recipients: 
     - sample_node
+
+
+
+
     
