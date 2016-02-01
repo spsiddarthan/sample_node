@@ -18,4 +18,11 @@ build:
     - ps -eax
     - ls -al
 
+notifications:
+ - integrationName: Sidslack
+   type : slack
+   recipients: 
+    - sample_node
+    
+
 
