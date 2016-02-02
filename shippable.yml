@@ -19,7 +19,20 @@ env:
    
 services:
    - mysql
-   
+env:
+  global:
+    - FOO=FUBU
+
+  matrix:
+    - M1=ONE
+    - M2=TWO
+matrix:
+  exclude:
+    - node_js : "5.0"
+      env : M1=ONE
+    
+    - node_js : "4.2.2"
+      env : M2=TWO   
   
 build:
  # pre_ci:
