@@ -4,7 +4,6 @@ language: node_js
 
 # Version number
 node_js:
-  - "0.12"
   - 0.10
  
 env:
@@ -26,23 +25,6 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - echo $key1 and $key2 and $key3
-    - echo $M2 and $M1
-    - echo $invalid_env and $splchars
-    - echo $foo
-    - echo $key4
-
-  #post_ci:
-   # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/shiphitchcock2_sample_node
-    #- docker push shippabledocker/shiphitchcock2_sample_node
-
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - "default/image"
 
     
     
