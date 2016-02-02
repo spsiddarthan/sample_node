@@ -3,19 +3,9 @@ language: node_js
 
 # Version number
 node_js:
-  - "0.12"
   - 0.10
  
-env:
-  global:
-   - FOO=FUBU
-  matrix:
-   - M1=ONE
-   - M2=two
-   - M3=three
-   
-services:
-   - mysql
+
    
   
 build:
@@ -25,11 +15,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - echo $key1 and $key2 and $key3
-    - echo $M2 and $M1
-    - echo $invalid_env and $splchars
-    - echo $foo
-    - echo $key4
+   
 
 
     
