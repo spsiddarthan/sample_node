@@ -31,17 +31,6 @@ build:
     - echo $foo
     - echo $key4
 
-  #post_ci:
-   # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/shiphitchcock2_sample_node
-    #- docker push shippabledocker/shiphitchcock2_sample_node
-
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - "default/image"
 
     
     
