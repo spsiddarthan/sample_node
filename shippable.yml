@@ -21,6 +21,7 @@ build:
     - ps -eax
     - ls -al
     - echo "hey"
+    - echo $FOO
     - echo $M1
     - echo $M2
 
