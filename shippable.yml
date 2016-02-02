@@ -3,38 +3,45 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.1
-  - 0.12
-  - 5.0
-  - 4.2.2
-
+  - "0.12"
+  - 0.10
+ 
 env:
   global:
-    - FOO=FUBU
-
+   - FOO=FUBU
   matrix:
-    - M1=ONE
-    - M2=TWO
-matrix:
-  exclude:
-    - node_js : "5.0"
-      env : M1=ONE
-    
-    - node_js : "4.2.2"
-      env : M2=TWO
-     
-build:
+   - M1=ONE
+   - M2=two
+   - M3=three
+   
+services:
+   - mysql
+   
   
+build:
+ # pre_ci:
+ #   - docker build -t=shippabledocker/sample_node .
+
   ci:
     - ps -eax
     - ls -al
-    - echo $FOO
-    - echo $M1
-    - echo $M2
+    - echo $key1 and $key2 and $key3
+    - echo $M2 and $M1
+    - echo $invalid_env and $splchars
+    - echo $foo
+    - echo $key4
 
+  #post_ci:
+   # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/shiphitchcock2_sample_node
+    #- docker push shippabledocker/shiphitchcock2_sample_node
 
-    
-    
-    
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
+      branches:
+        only:
+          - "default/image"
+
     
     
