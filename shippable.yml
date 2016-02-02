@@ -6,7 +6,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  - 0.12
+  - "0.12"
   
 env:
   global:
@@ -19,7 +19,7 @@ matrix:
     - node_js : "0.10"
       env : M1=ONE
     
-    - node_js : "0.12"
+    - node_js : 0.12
       env : M2=TWO   
   
 build:
