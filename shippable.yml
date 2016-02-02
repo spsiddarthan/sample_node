@@ -11,18 +11,26 @@ env:
 
   matrix:
     - M1=ONE
+    - M2=TWO
 
+matrix:
+  exclude: 
+    - node_js: "5.0"
+      env: M1=one
+    
+    - node_js: "4.2.2"
+      env: M2=two
+     
 build:
   
   ci:
     - ps -eax
     - ls -al
+    - echo "hey"
+    - echo $M1
+    - echo $M2
 
-notifications:
- - integrationName: Sidslack
-   type : slack
-   recipients: 
-    - sample_node
+
     
     
     
