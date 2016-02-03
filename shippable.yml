@@ -17,14 +17,10 @@ env:
 matrix:
   allow_failures:
     - node_js : 0.10
-  
-  include:
-    - node_js : 0.10
-      env : M6=SIX  
     
   exclude:
     - node_js : 0.10
-      env : M1=ONE
+      env : M1=ONE FOO=FUBU
     
     - node_js : 0.12
       env : M2=TWO   
