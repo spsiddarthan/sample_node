@@ -20,7 +20,7 @@ matrix:
     
   exclude:
     - node_js : 0.10
-      env : M1=ONE FOO=FUBU M2=TWO
+      env : M1=ONE 
     
     - node_js : 0.12
       env : M2=TWO   
