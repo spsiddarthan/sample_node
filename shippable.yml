@@ -9,21 +9,11 @@ node_js:
   - "0.12"
   
 env:
-  global:
-    - FOO=FUBU
+  
   matrix:
     - M1=ONE
     - M2=TWO
-matrix:
-  allow_failures:
-    - node_js : 0.10
-    
-  exclude:
-    - node_js : 0.10
-      env : M1=ONE 
-    
-    - node_js : 0.12
-      env : M2=TWO   
+
     
 build:
  # pre_ci:
