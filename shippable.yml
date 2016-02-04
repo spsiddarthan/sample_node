@@ -6,13 +6,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  - "0.12"
-  
-env:
-  
-  matrix:
-    - M1=ONE
-    - M2=TWO
+ 
 
     
 build:
