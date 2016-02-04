@@ -39,7 +39,7 @@ integrations:
     - integrationName: irc
       type: irc
       recipients:
-        - "webchat.freenode.net#madrasman"
+        - "chat.freenode.net#madrasman"
       on_success: always
       on_failure: change
       on_start: always    
