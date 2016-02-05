@@ -16,16 +16,6 @@ build:
   ci:
     - ps -eax
     - ls -al
-
-
-integrations:
-  notifications:
-    - integrationName: irc
-      type: irc
-      recipients:
-        - "chat.freenode.net#madrasman"
-        - "chat.freenode.net#madrasman2"
-      on_success: always
-      on_failure: change
-      on_start: always    
-    
+  cache: true
+  
+  
