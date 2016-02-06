@@ -1,21 +1,32 @@
-
-
-# Language setting
-language: node_js
-
-# Version number
+language: 
+  - node_js
+  - python 
 node_js:
-  - 0.10
- 
+ # - 0.12
+  - 0.10.25
 
-    
+env:
+services:
+  - neo4j
+  - tttt
+  - mysql
+
+matrix:
+   allow_failures:
+      - node_js: 0.10.25
+  
 build:
- # pre_ci:
- #   - docker build -t=shippabledocker/sample_node .
-
+  
   ci:
     - ps -eax
     - ls -al
-  cache: true
-  
-  
+    - mysql -e "create database if not exists \`project-test\`;"
+    - shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
+    - npm install
+    - npm test
+    - echo $M1 and $M2
+    - npm install
+    - npm test
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.10.25" ]; then foobar; fi
+ 
+
