@@ -6,6 +6,10 @@ node_js:
   - 0.10.25
 
 env:
+ global:
+   - M1=ONE
+   - M2=two
+
 services:
   - neo4j
   - tttt
@@ -28,5 +32,4 @@ build:
     - npm install
     - npm test
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.10.25" ]; then foobar; fi
- 
-
+    #- sleep 7000s
