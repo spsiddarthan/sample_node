@@ -11,7 +11,7 @@ env:
    - M2=two
 
 services:
-  - neo4j
+  - cassandra
 
 
   
