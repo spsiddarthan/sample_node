@@ -15,6 +15,7 @@ services:
   - elasticsearch
   - memcached
   - mysql
+  - neo4j
   - mongo
   - postgres
   - rabbitmq
