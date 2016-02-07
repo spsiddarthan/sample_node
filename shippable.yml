@@ -12,8 +12,17 @@ env:
 
 services:
   - neo4j
-  - tttt
+  - cassandra
+  - couchdb
+  - elasticsearch
+  - memcached
   - mysql
+  - mongo
+  - postgres
+  - rabbitmq
+  - redis
+  - rethinkdb
+  - selenium
 
 
   
