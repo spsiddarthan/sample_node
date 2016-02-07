@@ -11,7 +11,6 @@ env:
    - M2=two
 
 services:
-  - cassandra
   - couchdb
   - elasticsearch
   - memcached
