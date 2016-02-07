@@ -18,7 +18,6 @@ services:
   - mongo
   - postgres
   - rabbitmq
-  - redis
   - rethinkdb
   - selenium
 
