@@ -12,10 +12,18 @@ env:
 
 services:
   - memcached
+  - cassandra
+  - selenium
+  - mongo
+  - neo4j
+  - mysql
   - rabbitmq
   - rethinkdb
   - selenium
   - redis
+  - couchdb
+  - elasticsearch
+  - rethinkdb
 
 
   
