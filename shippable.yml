@@ -11,13 +11,6 @@ env:
    - M2=two
 
 services:
-  - couchdb
-  - elasticsearch
-  - memcached
-  - mysql
-  - neo4j
-  - mongo
-  - postgres
   - rabbitmq
   - rethinkdb
   - selenium
@@ -30,12 +23,5 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - mysql -e "create database if not exists \`project-test\`;"
-    - shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
-    - npm install
-    - npm test
-    - echo $M1 and $M2
-    - npm install
-    - npm test
-    - if [ "$SHIPPABLE_NODE_VERSION" == "0.10.25" ]; then foobar; fi
+    
     #- sleep 7000s
