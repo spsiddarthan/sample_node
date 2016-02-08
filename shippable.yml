@@ -13,7 +13,6 @@ env:
 services:
   - memcached
   - cassandra
-  - selenium
   - mongo
   - neo4j
   - mysql
