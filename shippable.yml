@@ -1,31 +1,10 @@
 language: 
   - node_js
-  - python 
 node_js:
  # - 0.12
   - 0.10.25
 
-env:
- global:
-   - M1=ONE
-   - M2=two
 
-services:
-  - memcached
-  - cassandra
-  - mongo
-  - neo4j
-  - mysql
-  - rabbitmq
-  - rethinkdb
-  - selenium
-  - redis
-  - couchdb
-  - elasticsearch
-  - rethinkdb
-
-
-  
 build:
   
   ci:
