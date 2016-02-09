@@ -11,4 +11,3 @@ build:
     - ps -eax
     - ls -al
     
-    #- sleep 7000s
