@@ -3,12 +3,16 @@ language:
 node_js:
   - 0.10.25
   
+notifications:
+  email:
+        - siddarthan@outlook.com
+        - spsiddhu@gmail.com
+  
 services:
   - memcached
   - cassandra
   - rabbitmq
   
-
 build:
   ci:
     - ps -eax
